@@ -11,7 +11,7 @@ services:
       environment:
         - MY_ROOT_PASSWORD=vprodbpass
   vprocache01:
-    image: memcahed
+    image: memcached
     container_name: vprocache01
     ports: 
       - "11211:11211"
