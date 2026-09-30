@@ -1,5 +1,6 @@
 FROM maven:3.9-eclipse-temurin-17 AS build
-RUN git clone git clone https://github.com/sandeepgou/vprofile-project-1.git
+
+RUN git clone https://github.com/sandeepgou/vprofile-project-1.git
 RUN cd vprofile-project-1 && git checkout containers && mvn install
 
 FROM tomcat:10.1-jdk17-temurin
