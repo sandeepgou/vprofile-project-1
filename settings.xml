@@ -16,8 +16,8 @@
     </server>
         <server>
         <id>${CENTRAL_REPO}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <username>${admin}</username>
+      <password>${Sandy@4317}</password>
     </server>
     <server>
         <id>${NEXUS_GRP_REPO}</id>
@@ -30,7 +30,11 @@
     <mirror>
       <id>${CENTRAL_REPO}</id>
       <name>${CENTRAL_REPO}</name>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}/</url>
+      <mirror>
+    <id>maven-central-pro</id>
+    <mirrorOf>*</mirrorOf>
+    <url>http://172.31.35.207:8081/repository/vpro-group/</url>
+</mirror>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
